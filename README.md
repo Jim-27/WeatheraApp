@@ -32,5 +32,5 @@ useEffect(() => {
 
 
 ## Live Demo
-[Weather App Live](https://yourgithub.github.io/weather-app)
+[Weather App Live](weathera-app-cyan.vercel.app)
 
