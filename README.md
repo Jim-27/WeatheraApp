@@ -1,31 +1,36 @@
 # Weather App
 
 ## Description
-This Weather App allows users to check the current weather conditions of any city worldwide. The app fetches real-time weather data from the OpenWeatherMap API and displays essential weather details such as temperature, humidity, and wind speed. It also includes animated cloud movement for a dynamic user experience.
+A simple weather application that fetches real-time weather data from the OpenWeatherMap API. Users can search for a city to view its temperature, humidity, and wind speed. The app features animated cloud movement and defaults to showing Manila's weather.
 
 ## Features
-- Search for weather data by city name
-- Displays temperature in Celsius and Fahrenheit
-- Shows humidity and wind speed
+- Search weather by city
+- Displays temperature (°C & °F), humidity, and wind speed
 - Animated cloud movement
-- Default weather display for Manila
-- Responsive design for mobile and desktop views
+- Default city: Manila
+- Responsive design
 
 ## API Source
-This application uses the **OpenWeatherMap API** to fetch real-time weather data.
-- API Endpoint: `https://api.openweathermap.org/data/2.5/weather`
-- Documentation: [OpenWeatherMap API](https://openweathermap.org/api)
-
-## Technologies Used
-- **React.js** (Frontend Framework)
-- **Vite** (Build Tool)
-- **CSS** (Styling)
-- **OpenWeatherMap API** (Weather Data Provider)
-- **FontAwesome** (Icons)
+- **OpenWeatherMap API**: Provides real-time weather data.
+- Endpoint: `https://api.openweathermap.org/data/2.5/weather`
 
 ## React Hooks Used
 ### `useState`
-- Used to manage the application state, such as storing city name, weather data, and cloud animation position.
+- Manages city input, weather data, and cloud animation position.
 ```js
+const [city, setCity] = useState("Manila");
+const [weather, setWeather] = useState(null);
+```
 
+### `useEffect`
+- Fetches weather data whenever the `city` state updates.
+```js
+useEffect(() => {
+  fetchWeather(city);
+}, [city]);
+```
+
+
+## Live Demo
+[Weather App Live](https://yourgithub.github.io/weather-app)
 
