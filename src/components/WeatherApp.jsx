@@ -105,7 +105,7 @@ const WeatherApp = () => {
 
       {/* Footer (GitHub Link) */}
       <div className="footer">
-        <a href="https://github.com/BulletOnli" target="_blank" rel="noopener noreferrer">
+        <a href="" target="_blank" rel="noopener noreferrer">
           <i className="fa-brands fa-github"></i>
         </a>
       </div>
